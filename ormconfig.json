@@ -4,5 +4,9 @@
     "port": 3306,
     "username": "root",
     "password": "root",
-    "database": "companhia_aerea"
+    "database": "companhia_aerea",
+    "migrations": ["src/database/migrations/*.ts"],
+    "cli": {
+        "migrationsDir": "src/database/migrations"
+    }
  }
