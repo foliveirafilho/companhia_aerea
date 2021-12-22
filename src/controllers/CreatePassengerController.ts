@@ -5,7 +5,7 @@ export class CreatePassengerController {
     async handle(request: Request, response: Response){
         const {rg, name, birthdate, passport} = request.body
 
-        const createPassengerService = new CreatePassengerService
+        const createPassengerService = new CreatePassengerService()
 
         const passenger = await createPassengerService.execute({rg, name, birthdate, passport})
 

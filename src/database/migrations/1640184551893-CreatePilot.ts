@@ -1,17 +1,17 @@
 import {MigrationInterface, QueryRunner, Table} from "typeorm";
 
-export class CreatePassengers1640118292560 implements MigrationInterface {
+export class CreatePilot1640184551893 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.createTable(
             new Table({
-                name: "passenger",
+                name: "pilot",
                 columns: [
                     {
-                        name: "rg",
+                        name: "uuid",
                         type: "varchar",
-                        length: "8",
-                        isPrimary: true,
+                        length: "36",
+                        isPrimary: true
                     },
                     {
                         name: "name",
@@ -22,9 +22,7 @@ export class CreatePassengers1640118292560 implements MigrationInterface {
                         name: "passport",
                         type: "varchar",
                         length: "8",
-                        isNullable: true,
-                        default: "NULL",
-                        isUnique: true
+                        isUnique: true,
                     },
                     {
                         name: "birthdate",
@@ -34,11 +32,10 @@ export class CreatePassengers1640118292560 implements MigrationInterface {
                 ]
             })
         )
-
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
-        await queryRunner.dropTable("passenger")
+        await queryRunner.dropTable("pilot")
     }
 
 }
