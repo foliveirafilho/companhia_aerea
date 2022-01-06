@@ -6,6 +6,7 @@ import { CreateFlightController } from "./controllers/CreateFlightController"
 import { CreatePassengerController } from "./controllers/CreatePassengerController"
 import { CreatePilotController } from "./controllers/CreatePilotController"
 import { CreateSeatController } from "./controllers/CreateSeatController"
+import { CreateTicketController } from "./controllers/CreateTicketController"
 
 const router = Router()
 
@@ -16,6 +17,7 @@ const createSeatController = new CreateSeatController()
 const createCityController = new CreateCityController()
 const createAirportController = new CreateAirportController()
 const createFlightController = new CreateFlightController()
+const createTicketController = new CreateTicketController()
 
 router.post("/passenger", createPassengerController.handle)
 router.post("/pilot", createPilotController.handle)
@@ -24,5 +26,6 @@ router.post("/seat", createSeatController.handle)
 router.post("/city", createCityController.handle)
 router.post("/airport", createAirportController.handle)
 router.post("/flight", createFlightController.handle)
+router.post("/ticket", createTicketController.handle)
 
 export {router}

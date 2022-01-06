@@ -38,10 +38,10 @@ export class Flight {
     arrival_airport: Airport
 
     @Column()
-    timestamp_departure: string
+    timestamp_departure: Date
 
     @Column()
-    timestamp_arrival: string
+    timestamp_arrival: Date
 
     constructor(){
         if(!this.uuid){
