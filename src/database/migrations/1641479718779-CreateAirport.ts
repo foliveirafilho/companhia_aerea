@@ -11,6 +11,7 @@ export class CreateAirport1641479718779 implements MigrationInterface {
                         {
                             name: "uuid",
                             type: "varchar",
+                            length: "36",
                             isPrimary: true
                         },
                         {
