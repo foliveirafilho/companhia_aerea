@@ -8,6 +8,8 @@ import { CreatePilotController } from "./controllers/CreatePilotController"
 import { CreateSeatController } from "./controllers/CreateSeatController"
 import { CreateTicketController } from "./controllers/CreateTicketController"
 import { ListAllAirplanesController } from "./controllers/ListAllAirplanesController"
+import { ListAllAirportsController } from "./controllers/ListAllAirportsController"
+import { ListAllPilotsController } from "./controllers/ListAllPilotsController"
 
 const router = Router()
 
@@ -21,6 +23,8 @@ const createFlightController = new CreateFlightController()
 const createTicketController = new CreateTicketController()
 
 const listAllAirplanesController = new ListAllAirplanesController()
+const listAllAirportsController = new ListAllAirportsController()
+const listAllPilotsController = new ListAllPilotsController()
 
 router.post("/passenger", createPassengerController.handle)
 router.post("/pilot", createPilotController.handle)
@@ -32,5 +36,7 @@ router.post("/flight", createFlightController.handle)
 router.post("/ticket", createTicketController.handle)
 
 router.get("/airplane", listAllAirplanesController.handle)
+router.get("/airport", listAllAirportsController.handle)
+router.get("/pilot", listAllPilotsController.handle)
 
 export {router}
