@@ -11,4 +11,19 @@
 * Um passageiro pode reservar um assento em um voo.
  
 ## ER Diagram
-Link: https://imgur.com/a/HAZM6x8
+![ER_Companhia_Aerea (1)](https://user-images.githubusercontent.com/36215435/148659924-bab69054-d0f4-44f9-8bba-d6011ec41dc1.jpg)
+
+## Running the application
+
+1. Connect to your MySQL database 
+* database=companhia_aerea
+* host=localhost
+* port=3306
+* user=root
+* password=root
+
+2. Run the following commands: `yarn typeorm migration:run` and then `yarn run dev`
+
+3. The application will be running on localhost:3306 as informed on console:
+
+![Capturar](https://user-images.githubusercontent.com/36215435/148659868-b5715a85-2519-468c-b112-cc598197fbb5.PNG)
